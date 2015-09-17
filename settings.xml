@@ -1,0 +1,59 @@
+<settings>
+<servers>
+    <server>
+      <id>internal</id>
+      <username>admin</username>
+      <password>zhuzi2008</password>
+    </server>
+    <server>
+      <id>snapshots</id>
+      <username>admin</username>
+      <password>zhuzi2008</password>
+    </server>
+ </servers>
+    <profiles>
+        <profile>
+            <id>Repository Proxy</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <!-- ******************************************************* -->
+            <!-- repositories for jar artifacts -->
+            <!-- ******************************************************* -->
+            <repositories>
+                <repository>
+                    <id>snapshots</id>
+                    <url>http://172.29.110.88:8080/repository/snapshots/</url>
+                    <releases>
+                        <enabled>true</enabled>
+			<updatePolicy>always</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+			<updatePolicy>always</updatePolicy>
+                    </snapshots>
+			
+                </repository>
+                <!-- omitted xml -->
+            </repositories>
+
+
+	<pluginRepositories>
+    <pluginRepository>
+      <id>central</id>
+      <url>http://172.29.110.88:8080/repository/central/</url>
+      <releases>
+	<enabled>true</enabled>
+	<updatePolicy>always</updatePolicy>
+	</releases>
+      <snapshots>
+	<enabled>true</enabled>
+	<updatePolicy>always</updatePolicy>
+</snapshots>
+    </pluginRepository>
+  </pluginRepositories>	
+        </profile>
+        <!-- omitted xml -->
+    </profiles>
+
+</settings>
